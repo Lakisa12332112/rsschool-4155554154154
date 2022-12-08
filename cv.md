@@ -1,0 +1,13 @@
+Сержантов Максим
++996500722220
+работать рано
+навыков особо нет
+ //load data
+ var data = new Instances(new BufferedReader(new FileReader("data/bank-data.arff")));
+ // new instance of clusterer
+ var model = new EM();
+ // build the clusterer
+ model.buildClusterer(data);
+ System.out.println(model);
+ var logLikelihood = ClusterEvaluation.crossValidateModel(model, data, 10, new Random(1));
+ английский  1А начальный
